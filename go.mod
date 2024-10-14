@@ -11,7 +11,7 @@ require (
 	github.com/casbin/casbin/v2 v2.100.0
 	github.com/go-kit/log v0.2.1
 	github.com/go-zookeeper/zk v1.0.4
-	github.com/golang-jwt/jwt/v4 v4.5.0
+	github.com/golang-jwt/jwt/v5 v5.2.1
 	github.com/hashicorp/consul/api v1.29.4
 	github.com/hudl/fargo v1.4.0
 	github.com/influxdata/influxdb1-client v0.0.0-20220302092344-a9ab5670611c

@@ -34,7 +34,7 @@ func TestGRPCClientTrace(t *testing.T) {
 	trace.RegisterExporter(rec)
 
 	cc, err := grpc.NewClient(
-		"",
+		"scheme:///test.server",
 		grpc.WithUnaryInterceptor(unaryInterceptor),
 		grpc.WithTransportCredentials(insecure.NewCredentials()),
 	)
