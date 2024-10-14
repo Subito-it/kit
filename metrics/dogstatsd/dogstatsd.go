@@ -324,7 +324,7 @@ func (t *Timing) Observe(value float64) {
 	t.obs(t.name, t.lvs, value)
 }
 
-// Histogram is a DogStatsD histrogram. Observations are forwarded to a
+// Histogram is a DogStatsD histogram. Observations are forwarded to a
 // Dogstatsd object, and collected (but not aggregated) per timeseries.
 type Histogram struct {
 	name string
@@ -332,7 +332,7 @@ type Histogram struct {
 	obs  observeFunc
 }
 
-// With implements metrics.Histogram.
+// With implements metrics. Histogram.
 func (h *Histogram) With(labelValues ...string) metrics.Histogram {
 	return &Histogram{
 		name: h.name,
