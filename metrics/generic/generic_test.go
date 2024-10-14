@@ -16,8 +16,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/go-kit/kit/metrics/generic"
-	"github.com/go-kit/kit/metrics/teststat"
+	"github.com/Subito-it/kit/metrics/generic"
+	"github.com/Subito-it/kit/metrics/teststat"
 )
 
 func TestCounter(t *testing.T) {

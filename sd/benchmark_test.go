@@ -4,7 +4,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/go-kit/kit/endpoint"
+	"github.com/Subito-it/kit/endpoint"
 	"github.com/go-kit/log"
 )
 

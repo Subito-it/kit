@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/go-kit/kit/endpoint"
-	"github.com/go-kit/kit/transport"
+	"github.com/Subito-it/kit/endpoint"
+	"github.com/Subito-it/kit/transport"
 	"github.com/go-kit/log"
 	amqp "github.com/rabbitmq/amqp091-go"
 )

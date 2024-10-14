@@ -1,4 +1,4 @@
-module github.com/go-kit/kit
+module github.com/Subito-it/kit
 
 go 1.22
 

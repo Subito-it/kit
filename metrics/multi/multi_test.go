@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/go-kit/kit/metrics"
+	"github.com/Subito-it/kit/metrics"
 )
 
 func TestMultiCounter(t *testing.T) {

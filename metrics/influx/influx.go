@@ -9,9 +9,9 @@ import (
 
 	influxdb "github.com/influxdata/influxdb1-client/v2"
 
-	"github.com/go-kit/kit/metrics"
-	"github.com/go-kit/kit/metrics/generic"
-	"github.com/go-kit/kit/metrics/internal/lv"
+	"github.com/Subito-it/kit/metrics"
+	"github.com/Subito-it/kit/metrics/generic"
+	"github.com/Subito-it/kit/metrics/internal/lv"
 	"github.com/go-kit/log"
 )
 

@@ -5,7 +5,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/go-kit/kit/transport"
+	"github.com/Subito-it/kit/transport"
 	"github.com/go-kit/log"
 )
 

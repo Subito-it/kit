@@ -11,9 +11,9 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/go-kit/kit/endpoint"
-	kitzipkin "github.com/go-kit/kit/tracing/zipkin"
-	grpctransport "github.com/go-kit/kit/transport/grpc"
+	"github.com/Subito-it/kit/endpoint"
+	kitzipkin "github.com/Subito-it/kit/tracing/zipkin"
+	grpctransport "github.com/Subito-it/kit/transport/grpc"
 )
 
 type dummy struct{}

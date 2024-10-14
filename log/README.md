@@ -75,7 +75,7 @@ Redirect stdlib logger to Go kit logger.
 import (
 	"os"
 	stdlog "log"
-	kitlog "github.com/go-kit/kit/log"
+	kitlog "github.com/Subito-it/kit/log"
 )
 
 func main() {
@@ -114,7 +114,7 @@ logger.Log("msg", "hello")
 
 ## Levels
 
-Log levels are supported via the [level package](https://godoc.org/github.com/go-kit/kit/log/level).
+Log levels are supported via the [level package](https://godoc.org/github.com/Subito-it/kit/log/level).
 
 ## Supported output formats
 

@@ -9,8 +9,8 @@ import (
 
 	"github.com/go-zookeeper/zk"
 
-	"github.com/go-kit/kit/endpoint"
-	"github.com/go-kit/kit/sd"
+	"github.com/Subito-it/kit/endpoint"
+	"github.com/Subito-it/kit/sd"
 	"github.com/go-kit/log"
 )
 

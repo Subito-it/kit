@@ -12,7 +12,7 @@ import (
 	"testing"
 	"time"
 
-	httptransport "github.com/go-kit/kit/transport/http"
+	httptransport "github.com/Subito-it/kit/transport/http"
 )
 
 type TestResponse struct {

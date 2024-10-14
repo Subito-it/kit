@@ -1,8 +1,8 @@
 package etcdv3
 
 import (
-	"github.com/go-kit/kit/sd"
-	"github.com/go-kit/kit/sd/internal/instance"
+	"github.com/Subito-it/kit/sd"
+	"github.com/Subito-it/kit/sd/internal/instance"
 	"github.com/go-kit/log"
 )
 
