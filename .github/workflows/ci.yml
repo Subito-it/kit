@@ -36,13 +36,6 @@ jobs:
         ports:
           - 2181
 
-      eureka:
-        image: springcloud/eureka
-        ports:
-          - 8761
-        env:
-          eureka.server.responseCacheUpdateIntervalMs: 1000
-
     steps:
       - name: Set up Go
         uses: actions/setup-go@v5
@@ -58,7 +51,6 @@ jobs:
           ETCD_ADDR: http://localhost:${{ job.services.etcd.ports[2379] }}
           CONSUL_ADDR: localhost:${{ job.services.consul.ports[8500] }}
           ZK_ADDR: localhost:${{ job.services.zk.ports[2181] }}
-          EUREKA_ADDR: http://localhost:${{ job.services.eureka.ports[8761] }}/eureka
         run: go test -v -race -coverprofile=coverage.coverprofile -covermode=atomic -tags integration ./...
 
       - name: Upload coverage
