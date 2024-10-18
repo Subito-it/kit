@@ -14,9 +14,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/go-kit/kit/metrics"
-	"github.com/go-kit/kit/metrics/generic"
-	"github.com/go-kit/kit/util/conn"
+	"github.com/Subito-it/kit/metrics"
+	"github.com/Subito-it/kit/metrics/generic"
+	"github.com/Subito-it/kit/util/conn"
 	"github.com/go-kit/log"
 )
 

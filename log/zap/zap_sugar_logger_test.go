@@ -2,11 +2,12 @@ package zap_test
 
 import (
 	"encoding/json"
-	kitzap "github.com/go-kit/kit/log/zap"
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
 	"strings"
 	"testing"
+
+	kitzap "github.com/Subito-it/kit/log/zap"
+	"go.uber.org/zap"
+	"go.uber.org/zap/zapcore"
 )
 
 func TestZapSugarLogger(t *testing.T) {

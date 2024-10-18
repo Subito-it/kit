@@ -10,14 +10,14 @@ import (
 	"go/parser"
 	"go/token"
 	"go/types"
-	"io/ioutil"
 	"math"
 	"math/rand"
+	"os"
 	"sync"
 	"testing"
 
-	"github.com/go-kit/kit/metrics/generic"
-	"github.com/go-kit/kit/metrics/teststat"
+	"github.com/Subito-it/kit/metrics/generic"
+	"github.com/Subito-it/kit/metrics/teststat"
 )
 
 func TestCounter(t *testing.T) {
@@ -119,7 +119,7 @@ func TestSimpleHistogram(t *testing.T) {
 // But currently works for Counter and Gauge.
 // To have a more solid test, this test should be removed and the other tests should be run on a 32-bit arch.
 func TestAtomicAlignment(t *testing.T) {
-	content, err := ioutil.ReadFile("./generic.go")
+	content, err := os.ReadFile("./generic.go")
 	if err != nil {
 		t.Fatal(err)
 	}

@@ -19,11 +19,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/go-kit/kit/metrics"
-	"github.com/go-kit/kit/metrics/generic"
-	"github.com/go-kit/kit/metrics/internal/lv"
-	"github.com/go-kit/kit/metrics/internal/ratemap"
-	"github.com/go-kit/kit/util/conn"
+	"github.com/Subito-it/kit/metrics"
+	"github.com/Subito-it/kit/metrics/generic"
+	"github.com/Subito-it/kit/metrics/internal/lv"
+	"github.com/Subito-it/kit/metrics/internal/ratemap"
+	"github.com/Subito-it/kit/util/conn"
 	"github.com/go-kit/log"
 )
 
@@ -310,7 +310,7 @@ func (t *Timing) Observe(value float64) {
 	t.obs(t.name, t.lvs, value)
 }
 
-// Histogram is a InfluxStatsD histrogram. Observations are forwarded to a
+// Histogram is a InfluxStatsD histogram. Observations are forwarded to a
 // Influxstatsd object, and collected (but not aggregated) per timeseries.
 type Histogram struct {
 	name string

@@ -4,13 +4,13 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 	"sync/atomic"
 
-	"github.com/go-kit/kit/endpoint"
-	httptransport "github.com/go-kit/kit/transport/http"
+	"github.com/Subito-it/kit/endpoint"
+	httptransport "github.com/Subito-it/kit/transport/http"
 )
 
 // Client wraps a JSON RPC method and provides a method that implements endpoint.Endpoint.
@@ -179,7 +179,7 @@ func (c Client) Endpoint() endpoint.Endpoint {
 
 		req.Header.Set("Content-Type", "application/json; charset=utf-8")
 		var b bytes.Buffer
-		req.Body = ioutil.NopCloser(&b)
+		req.Body = io.NopCloser(&b)
 		err = json.NewEncoder(&b).Encode(rpcReq)
 		if err != nil {
 			return nil, err

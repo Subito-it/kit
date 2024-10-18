@@ -8,8 +8,8 @@ import (
 
 	"google.golang.org/grpc/metadata"
 
-	"github.com/go-kit/kit/transport/grpc"
-	"github.com/go-kit/kit/transport/http"
+	"github.com/Subito-it/kit/transport/grpc"
+	"github.com/Subito-it/kit/transport/http"
 )
 
 const (
@@ -43,7 +43,7 @@ func ContextToHTTP() http.RequestFunc {
 }
 
 // GRPCToContext moves a JWT from grpc metadata to context. Particularly
-// userful for servers.
+// useful for servers.
 func GRPCToContext() grpc.ServerRequestFunc {
 	return func(ctx context.Context, md metadata.MD) context.Context {
 		// capital "Key" is illegal in HTTP/2.

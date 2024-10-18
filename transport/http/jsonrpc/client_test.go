@@ -4,13 +4,12 @@ import (
 	"context"
 	"encoding/json"
 	"io"
-	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
 	"net/url"
 	"testing"
 
-	"github.com/go-kit/kit/transport/http/jsonrpc"
+	"github.com/Subito-it/kit/transport/http/jsonrpc"
 )
 
 type TestResponse struct {
@@ -169,7 +168,7 @@ func TestClientHappyPath(t *testing.T) {
 			t.Fatal("Header not set by before func.")
 		}
 
-		b, err := ioutil.ReadAll(r.Body)
+		b, err := io.ReadAll(r.Body)
 		if err != nil && err != io.EOF {
 			t.Fatal(err)
 		}
@@ -248,7 +247,7 @@ func TestCanUseDefaults(t *testing.T) {
 	)
 
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		b, err := ioutil.ReadAll(r.Body)
+		b, err := io.ReadAll(r.Body)
 		if err != nil && err != io.EOF {
 			t.Fatal(err)
 		}

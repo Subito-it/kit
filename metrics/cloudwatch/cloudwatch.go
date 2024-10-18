@@ -12,9 +12,9 @@ import (
 	"github.com/aws/aws-sdk-go/service/cloudwatch"
 	"github.com/aws/aws-sdk-go/service/cloudwatch/cloudwatchiface"
 
-	"github.com/go-kit/kit/metrics"
-	"github.com/go-kit/kit/metrics/generic"
-	"github.com/go-kit/kit/metrics/internal/lv"
+	"github.com/Subito-it/kit/metrics"
+	"github.com/Subito-it/kit/metrics/generic"
+	"github.com/Subito-it/kit/metrics/internal/lv"
 	"github.com/go-kit/log"
 )
 
@@ -327,7 +327,7 @@ func (g *Gauge) Add(delta float64) {
 	g.add(g.name, g.lvs, delta)
 }
 
-// Histogram is an Influx histrogram. Observations are aggregated into a
+// Histogram is an Influx histogram. Observations are aggregated into a
 // generic.Histogram and emitted as per-quantile gauges to the Influx server.
 type Histogram struct {
 	name string

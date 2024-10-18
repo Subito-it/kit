@@ -1,18 +1,18 @@
 package circuitbreaker_test
 
 import (
-	"io/ioutil"
+	"io"
 	stdlog "log"
 	"testing"
 	"time"
 
 	"github.com/afex/hystrix-go/hystrix"
 
-	"github.com/go-kit/kit/circuitbreaker"
+	"github.com/Subito-it/kit/circuitbreaker"
 )
 
 func TestHystrix(t *testing.T) {
-	stdlog.SetOutput(ioutil.Discard)
+	stdlog.SetOutput(io.Discard)
 
 	const (
 		commandName   = "my-endpoint"

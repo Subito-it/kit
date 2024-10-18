@@ -9,11 +9,12 @@ import (
 	"go.opencensus.io/trace/propagation"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
+	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/go-kit/kit/endpoint"
-	ockit "github.com/go-kit/kit/tracing/opencensus"
-	grpctransport "github.com/go-kit/kit/transport/grpc"
+	"github.com/Subito-it/kit/endpoint"
+	ockit "github.com/Subito-it/kit/tracing/opencensus"
+	grpctransport "github.com/Subito-it/kit/transport/grpc"
 )
 
 type dummy struct{}
@@ -32,10 +33,10 @@ func TestGRPCClientTrace(t *testing.T) {
 
 	trace.RegisterExporter(rec)
 
-	cc, err := grpc.Dial(
-		"",
+	cc, err := grpc.NewClient(
+		"scheme:///test.server",
 		grpc.WithUnaryInterceptor(unaryInterceptor),
-		grpc.WithInsecure(),
+		grpc.WithTransportCredentials(insecure.NewCredentials()),
 	)
 	if err != nil {
 		t.Fatalf("unable to create gRPC dialer: %s", err.Error())
